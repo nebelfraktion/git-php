@@ -619,7 +619,7 @@
 				throw new GitException("Command $cmd failed.");
 			}
 
-			if($filter !== NULL)
+			if($filter !== NULL && is_callable($filter))
 			{
 				$newArray = array();
 
